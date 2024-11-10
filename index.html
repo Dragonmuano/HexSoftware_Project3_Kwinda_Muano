@@ -1,0 +1,165 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Kwinda Muano | Resume</title>
+    <style>
+        /* Basic CSS Styling */
+
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            color: #333;
+            display: flex;
+            justify-content: center;
+            background: url('img/dragon') no-repeat center center fixed;
+            background-size: cover;
+        }
+
+        .container {
+            width: 80%;
+            max-width: 900px;
+            background-color: rgba(192, 164, 164, 0.9);
+            padding: 20px;
+            margin: 40px auto;
+            border-radius: 8px;
+            box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.2);
+        }
+
+        header {
+            text-align: center;
+            margin-bottom: 20px;
+        }
+
+        header img {
+            width: 150px;
+            height: 150px;
+            border-radius: 50%;
+            object-fit: cover;
+            margin-bottom: 10px;
+            border: 3px solid #fff;
+            box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
+        }
+
+        header h1 {
+            margin: 10px 0 5px;
+            font-size: 28px;
+        }
+
+        header h2 {
+            margin: 0;
+            font-size: 20px;
+            color: #666;
+        }
+
+        .section {
+            margin-top: 20px;
+            padding: 10px;
+        }
+
+        .section h3 {
+            font-size: 22px;
+            margin-bottom: 10px;
+            color: #444;
+        }
+
+        .about p, .skills ul {
+            font-size: 16px;
+            line-height: 1.6;
+        }
+
+        .skills ul {
+            list-style-type: none;
+            padding: 0;
+        }
+
+        .skills ul li {
+            padding: 5px 0;
+        }
+
+        .skills ul li::before {
+            content: "✔";
+            margin-right: 10px;
+            color: #28a745;
+        }
+    </style>
+</head>
+<body>
+
+    <div class="container">
+        <!-- Header Section -->
+        <header>
+            <img src="img/dragon" alt="Your Headshot">
+            <h1>Kwinda Muano</h1>
+            <h2>A student</h2>
+        </header>
+
+        <!-- About Me Section -->
+        <div class="section about">
+            <h3>About Me</h3>
+            <p>
+                
+                
+                I am a dedicated B.Sc. student in Mathematics and Computer Science with a strong interest in web development and software engineering. Over the past year, I have been building websites and honing my skills in HTML, CSS, JavaScript, and responsive design. My studies in mathematics have enhanced my analytical abilities, while my computer science coursework has given me a solid foundation in algorithms, data structures, and problem-solving.
+                
+                Driven by a passion for creating user-friendly and efficient digital experiences, I am constantly exploring new technologies and improving my coding skills. I enjoy taking on new projects, from designing simple static pages to developing more dynamic, interactive applications. My unique blend of technical knowledge and problem-solving ability sets me apart, and I’m excited to apply my skills in real-world settings, continually learning and growing in the field of web development.
+                
+                
+                
+            
+            </p>
+        </div>
+
+        <!-- Skills Section -->
+        <div class="section skills">
+            <h3>Skills</h3>
+            <h4>Technical Skills</h4>
+            <ul id="technical-skills">
+                <!-- Skills will be populated here by JavaScript -->
+            </ul>
+            <h4>Soft Skills</h4>
+            <ul id="soft-skills">
+                <!-- Skills will be populated here by JavaScript -->
+            </ul>
+        </div>
+    </div>
+
+    <script>
+        // JavaScript to add skills dynamically
+
+        const technicalSkills = [
+            "JavaScript",
+            "HTML & CSS",
+            "React.js",
+            "Node.js",
+            "Python",
+            "Git & GitHub"
+        ];
+
+        const softSkills = [
+            "Problem-Solving",
+            "Communication",
+            "Team Collaboration",
+            "Adaptability",
+            "Time Management"
+        ];
+
+        // Function to populate skills list
+        function populateSkills(skills, elementId) {
+            const skillList = document.getElementById(elementId);
+            skills.forEach(skill => {
+                const listItem = document.createElement("li");
+                listItem.textContent = skill;
+                skillList.appendChild(listItem);
+            });
+        }
+
+        // Populate both technical and soft skills
+        populateSkills(technicalSkills, "technical-skills");
+        populateSkills(softSkills, "soft-skills");
+    </script>
+
+</body>
+</html>
